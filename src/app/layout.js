@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-	title: "IMDB Clone",
+	title: "IMDb Clone",
 	description: "This is the IMDB Clone",
 };
 

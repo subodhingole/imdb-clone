@@ -2,7 +2,6 @@ import Link from "next/link";
 import React from "react";
 import { FiHome } from "react-icons/fi";
 import { GrInfo } from "react-icons/gr";
-import { MdOutlineDarkMode, MdDarkMode } from "react-icons/md";
 import DarkModeSwitch from "./DarkModeSwitch";
 import MenuItem from "./MenuItem";
 

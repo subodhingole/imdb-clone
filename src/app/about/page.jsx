@@ -2,7 +2,7 @@ import React from "react";
 
 const page = () => {
 	return (
-		<div className="max-w-6xl mx-auto space-x-4 mt-32 space-y-4">
+		<div className="max-w-6xl mx-auto space-x-4 mt-4 md:mt-16 sm:mt-8 lg:mt-32 space-y-4 p-4">
 			<h1 className="text-2xl font-medium text-amber-500">About Page</h1>
 			<p>
 				An IMDb clone made with Next.js 13's new app directory and

@@ -4,7 +4,7 @@ const Results = ({ results }) => {
 	return (
 		<div>
 			{results.map((result) => (
-				<p> {result.original_title} </p>
+				<div key={result.id}> {result.original_title} </div>
 			))}
 		</div>
 	);

@@ -1,10 +1,18 @@
 import React from "react";
+import Card from "./Card";
 
 const Results = ({ results }) => {
+	console.log(results);
 	return (
-		<div>
+		<div className="flex flex-wrap max-w-[90rem] gap-8 p-8 justify-around items-center mx-auto">
 			{results.map((result) => (
-				<div key={result.id}> {result.original_title} </div>
+				<Card
+					key={result.id}
+					id={result.id}
+					result={result}
+					title={result.title}
+					imgUrl={result.poster_path}
+				/>
 			))}
 		</div>
 	);

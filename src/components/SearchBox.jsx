@@ -1,25 +1,34 @@
 "use client";
-import React, { useState } from "react";
-const SearchBox = () => {
+
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+export default function SearchBox() {
 	const [search, setSearch] = useState("");
+	const router = useRouter();
+	function handleSubmit(e) {
+		e.preventDefault();
+		if (!search) return;
+		router.push(`/search/${search}`);
+	}
 	return (
-		<form className="flex">
+		<form
+			onSubmit={handleSubmit}
+			className="flex max-w-6xl mx-auto justify-between items-center px-5"
+		>
 			<input
 				value={search}
-				type="text"
-				placeholder="Search for a movie"
-				className="w-full active:outline-none active:border-transparent focus:outline-none   focus:border-transparent dark:border-gray-500 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 py-2 px-4 block appearance-none leading-normal"
 				onChange={(e) => setSearch(e.target.value)}
+				type="text"
+				placeholder="Search keywords..."
+				className="w-full h-14 rounded-sm placeholder-gary-500 outline-none bg-transparent flex-1"
 			/>
-			<a
+			<button
+				disabled={!search}
 				type="submit"
-				className="px-2 bg-amber-500 rounded-tl-lg rounded-bl-lg hover:bg-amber-700 text-white font-bold"
-				href={`/search/${search}`}
+				className="text-amber-600 disabled:text-gray-400"
 			>
 				Search
-			</a>
+			</button>
 		</form>
 	);
-};
-
-export default SearchBox;
+}

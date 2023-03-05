@@ -2,8 +2,8 @@ import React from "react";
 
 const loading = () => {
 	return (
-		<div>
-			<img src="/load.svg" alt="loading" />
+		<div className="h-screen w-full flex justify-center items-center">
+			<img className="" src="/load.svg" alt="loading" />
 		</div>
 	);
 };

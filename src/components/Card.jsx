@@ -3,14 +3,12 @@ import Link from "next/link";
 import React from "react";
 import { FiThumbsUp } from "react-icons/fi";
 
-const Card = ({ id, title, imgUrl, result }) => {
+const Card = ({ result }) => {
 	return (
 		<div className="w-60 h-80 bg-gray-300 dark:bg-gray-500 rounded-lg p-4 cursor-pointer sm:hover:shadow-slate-400 sm:hover:shadow-sm hover:-translate-y-2 transition-transform duration-75">
 			<Link href={`/movie/${result.id}`}>
 				<Image
-					src={`https://image.tmdb.org/t/p/original/${
-						result.backdrop_path || result.poster_path
-					}`}
+					src={`https://image.tmdb.org/t/p/original/${result.backdrop_path}`}
 					width={500}
 					height={300}
 					className="sm:rounded-t-lg group-hover:opacity-80 transition-opacity duration-200"

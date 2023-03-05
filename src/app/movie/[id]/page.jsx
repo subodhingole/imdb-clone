@@ -40,9 +40,13 @@ const page = async ({ params }) => {
 			</div>
 			<div className="flex-1 md:mx-8 flex flex-col h-full">
 				<div className="flex-grow">
-					<h1 className="text-4xl underline underline-offset-4 font-bold">
+					<h1 className="text-4xl underline underline-offset-4 font-bold hidden md:block">
+						{data.title}
+					</h1>
+					<h1 className="text-4xl underline underline-offset-4 font-bold md:hidden">
 						Description
 					</h1>
+
 					<p className="mt-4 text-justify">{data.overview}</p>
 				</div>
 				<div className="flex-grow hidden flex-col items-center justify-center md:block mt-8">

@@ -2,12 +2,8 @@
 import React, { useState } from "react";
 const SearchBox = () => {
 	const [search, setSearch] = useState("");
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		if (!search) return;
-	};
 	return (
-		<form onSubmit={handleSubmit} className="flex">
+		<form className="flex">
 			<input
 				value={search}
 				type="text"

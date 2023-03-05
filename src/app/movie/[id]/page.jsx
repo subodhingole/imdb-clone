@@ -11,7 +11,7 @@ const page = async ({ params }) => {
 
 	return (
 		<div className="flex md:flex-row flex-col m-8 items-center md:items-start">
-			<div className="flex flex-col md:flex-row items-center flex-shrink w-full md:w-auto bg-gray-300 p-4 rounded-lg">
+			<div className="flex flex-col md:flex-row items-center flex-shrink w-full md:w-auto bg-gray-300 dark:bg-gray-600 p-4 rounded-lg">
 				<Image
 					src={`https://image.tmdb.org/t/p/original/${data.poster_path}`}
 					height={300}

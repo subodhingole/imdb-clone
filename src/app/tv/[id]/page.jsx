@@ -25,11 +25,14 @@ const page = async ({ params }) => {
 						{" "}
 						{data.name}{" "}
 					</h1>
-					<p> 🕐Runtime: {data.runtime}min</p>
-					<p> 🎙️Studio: {data.production_companies[0].name}</p>
-					<p> 📅Release Date: {data.release_date}</p>
-					<p> 📈Revenue: {data.revenue}</p>
-					<p> 📽️Status: {data.status}</p>
+					<p> 🕐Runtime: {data.runtime || "N/A"}min</p>
+					<p>
+						{" "}
+						🎙️Studio: {data.production_companies[0].name || "N/A"}
+					</p>
+					<p> 📅Release Date: {data.release_date || "N/A"}</p>
+					<p> 📈Revenue: {data.revenue || "N/A"}</p>
+					<p> 📽️Status: {data.status || "N/A"}</p>
 					<p> 🎯Ratings: 4.23⭐</p>
 					<div className=" md:hidden bg-amber-500 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded mt-8 self-start">
 						<WatchNow link={data.homepage} />
